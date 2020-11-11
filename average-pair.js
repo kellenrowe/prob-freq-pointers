@@ -21,12 +21,12 @@
  * 
  */
 
-function averagePair(sortedArr, targetAvg) {
+function averagePair(sortedNums, targetAvg) {
   let left = 0;
-  let right = sortedArr.length - 1;
+  let right = sortedNums.length - 1;
 
   while(left < right) {
-    let avg = (sortedArr[left] + sortedArr[right]) / 2;
+    let avg = (sortedNums[left] + sortedNums[right]) / 2;
     if(avg === targetAvg) {
       return true;
     } else if (avg > targetAvg) {

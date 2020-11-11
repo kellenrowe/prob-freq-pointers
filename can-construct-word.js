@@ -15,7 +15,7 @@ function canConstructWord(word, letters) {
     return true
 }
 
-/* accepts a string and returns a frequency counter */
+/* accepts a string and returns a frequency counter of letters*/
 function createFreqCounter(letterString) {
     let letterFreq = {};
     for (let letter of letterString) {
