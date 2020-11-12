@@ -25,15 +25,15 @@ function sameFrequency(positiveInt1, positiveInt2) {
   let stringInt2 = positiveInt2.toString();
   if (stringInt1.length !== stringInt2.length) return false;
 
-  let int1FreqCount = createFreqCounter(stringInt1);
-  let int2FreqCount = createFreqCounter(stringInt2);
+  let intFreqCount1 = createFreqCounter(stringInt1);
+  let intFreqCount2 = createFreqCounter(stringInt2);
 
-  for (let key in int1FreqCount) {
-    console.log('value at int2FreqCount: ', int2FreqCount[key]);
-    if (!(key in int2FreqCount)) {
+  for (let key in intFreqCount1) {
+    console.log('value at int2FreqCount: ', intFreqCount2[key]);
+    if (!(key in intFreqCount2)) {
       console.log('returning at key/value check')
       return false;
-    } else if (int2FreqCount[key] !== int1FreqCount[key]) {
+    } else if (intFreqCount2[key] !== intFreqCount1[key]) {
       console.log('returning at value check')
       return false;
     }
